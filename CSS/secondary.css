@@ -1,0 +1,40 @@
+* {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+form,div{
+	padding:10px;
+}
+input[type=textbox]{
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+
+}
+input[type=submit] {
+	background-color: #d9534f;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  }
+	input[type=submit]:hover{
+		opacity: 0.9;
+
+	}
+	#staticnav{
+		background-color:#EAAAAA;
+		padding:10px;
+	}
+	#staticnav a{
+		padding-left: 10px;
+		font-size: 18px;
+	}
+
+a:hover,a:active{
+	text-decoration: none;
+	opacity: 0.5;
+}
+a:link,a:visited
+{
+	text-decoration: none;
+}

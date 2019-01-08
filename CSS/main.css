@@ -1,0 +1,127 @@
+
+#loader{
+position:absolute;
+top:50%;
+left:50%;
+border:16px solid #f3f3f3;
+border-radius:50%;
+width: 120px;
+height: 120px;
+margin:-60px 0px 0px -60px;
+border-top:16px solid #000;
+border-right:16px solid #333;
+border-bottom:16px solid #777;
+border-left:16px solid #BBB;
+animation:spin 4s infinite;
+}
+#parallax {
+  opacity:0.9;
+position: relative;
+background-attachment: fixed;
+background-position:center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+#head1 a{
+  text-decoration: none;
+	cursor:pointer;
+}
+
+.backgroundimg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  position:fixed;
+  background-image:url(logo.png);
+}
+#parallax p{
+    background-color: #1114;
+    color: #eee;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+#head1{
+	display:none;
+}
+#backimg{
+	width:50%;
+	height:50%;
+}
+header{
+display:inline-block;
+background-color:#EEE;
+text-align:center;
+width:100%;
+height:auto;
+overflow:hidden;
+}
+#staticnav{
+  overflow: hidden;
+  background-color: #333;
+  padding: 15px;
+}
+
+#staticnav a{
+  font-size:24px;
+
+color: #eee;
+left:5%;
+padding:15px;
+font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#staticnav a:hover{
+opacity: 0.4;
+}
+
+
+@keyframes spin{
+50%{transform:rotate(360deg);}
+}
+
+input[type=text], input[type=password], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#subimages{
+  display: block;
+  padding:10px;
+  height:400px;
+  width:600px;
+}
+
+button {
+    background-color: #eee;
+    color: #1AAAAA;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.9;
+    color:#4AAAAA;
+
+}
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+.contentSec{
+	display:none;
+}
