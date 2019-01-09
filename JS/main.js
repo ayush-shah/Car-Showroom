@@ -1,13 +1,18 @@
-var var1;
 var buttonClicked=0;
-function timeoutPage(){
-var1=setTimeout(showPage,000);
+function loader(){
+var var1=document.readyState;
+if(var1=='complete')
+{
+	setTimeout(function(){
+		document.getElementById("loader").style.display="none";
+		document.getElementById("head1").style.display="block";
+	},2000);
+}
+else{
+	document.getElementById("head1").style.display="block";
+}
 }
 
-function showPage(){
-document.getElementById("loader").style.display="none";
-document.getElementById("head1").style.display="block";
-}
 
 function openSec(evt,secName){
 

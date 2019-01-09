@@ -13,7 +13,7 @@ include 'PHP/Connection.php';
       <link rel="shortcut icon" type="image/x-icon" href="Icon/favicon.ico" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-    <body onload="timeoutPage()">
+    <body onload="loader()">
       <div id="loader" class="backgroundimg">
       </div>
       <div id="head1" >
@@ -89,7 +89,8 @@ include 'PHP/Connection.php';
               </form>
             </div>
             <?php
-            for($i=0;$i<count($subid);$i++){
+            for($i=0;$i<count($subid);$i++)
+            {
               echo "<div id='".$subid[$i]."' class='contentSec')>";
               $result1 = mysqli_query($conn, "SELECT * FROM `c_details` WHERE `Id`=".$subid[$i]."");
               $row=mysqli_fetch_array($result1);
