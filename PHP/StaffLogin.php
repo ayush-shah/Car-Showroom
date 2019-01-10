@@ -26,7 +26,7 @@ Car Name :  <input type="text" placeholder="Car's Name" name="cname" required><b
 Car's Main Image :<input type="file" placeholder="Car's Image" style="display:inline;" name="image" required><br>
 Car's Sub Image :<input type="file" placeholder="Car's Image" style="display:inline;" name="subimage[]" required multiple><br>
 Car Price : <input type="number" placeholder="Car's Price" name="price" min="1000" value="1000" max="100000" step="1000" required><br>
-Stock : <input type="number" placeholder="Stock" name="stock" value="1" min="1" max="5" required><br>
+Stock : <input type="number" placeholder="Stock" name="stock" value="1" min="1" max="5" required>
 <br><input type="submit" name="sub" value="Submit">
 </form>
 <?php
@@ -65,13 +65,13 @@ $final=mysqli_query($conn,$sql);
         echo  "Failed to upload image <br>";
     }
   }
-header("refresh:0");
+echo "<meta http-equiv='refresh' content='0'>";
 }
 
 ?>
 </div>
 <div class="contentSec" id="Update" style="display:none">
-<form action=# method="POST">
+<form method="POST" enctype="multipart/form-data">
 <h3>
 Car Details :
 </h3>
@@ -83,15 +83,17 @@ Stock : <input type="number" placeholder="Stock" name="stock" value="1" min="1" 
 <input type="submit" name="submit" value="Submit">
 </form>
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
 $name=$_POST['cname'];
+$image=$_FILES['cimage']['name'];
 $price=$_POST['price'];
 $s1=$_POST['stock'];
 $id1=$_POST['cnum'];
 // Check connection
-$sql="UPDATE `c_details` SET `Name`=\"$name\",`Price`='$price',`Stock`='$s1' WHERE `Id`='$id1'";
+$sql="UPDATE `c_details` SET `Name`=\"$name\",`Image`='$image',`Price`='$price',`Stock`='$s1' WHERE `Id`='$id1'";
 $res=mysqli_query($conn,$sql);
-header("refresh:1");
+echo "<meta http-equiv='refresh' content='0'>";
 }
 ?>
 
@@ -112,8 +114,7 @@ $resu4=mysqli_query($conn,$sql4);
 
 $sql="DELETE FROM `c_details` WHERE `Id`='$id1'";
 $resu=mysqli_query($conn,$sql);
-header("refresh:0");
-}
+echo "<meta http-equiv='refresh' content='0'>";}
 ?>
 </div>
 <?php
