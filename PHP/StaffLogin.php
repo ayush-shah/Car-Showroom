@@ -14,8 +14,8 @@ include 'Connection.php';
 <a href=# onClick="openSec(event,'Update')"> Update </a>
 <a href=# onClick="openSec(event,'Delete')"> Delete </a>
 <a href="Logout.php" style="float:right;padding-right:10px;">LogOut</a>
-<a href="ChangePass.php ">Change Password</a>
-<a href="RemAcc.php ">Delete Account</a>
+<a href=# onClick="openSec(event,'ChangePass')">Change Password</a>
+<a href=# onClick="openSec(event,'RemAcc')">Delete Account</a>
 </div>
 <div class="contentSec" id="Insert" style="display:clear;">
 <form action=# method="POST" enctype="multipart/form-data">
@@ -117,6 +117,7 @@ $resu=mysqli_query($conn,$sql);
 echo "<meta http-equiv='refresh' content='0'>";}
 ?>
 </div>
+<div id="staffimg">
 <?php
 while ($row = mysqli_fetch_array($result)) {
     echo "<div>";
@@ -125,5 +126,51 @@ while ($row = mysqli_fetch_array($result)) {
 		echo "</div>";
 }
 ?>
+</div>
+<div class="contentSec" id="ChangePass" style="display:none">
+  <form method="POST">
+  <input type="textbox" placeholder="New Password" name="textbox">
+  <input type="submit" name="changepass" onclick="Logout.php">
+  </form>
+  <?php
+  $username=$_SESSION['username'];
+  $psw=$_SESSION['psw'];
+  if(isset($_POST['changepass'])){
+      $newpass=$_POST['textbox'];
+  	$sql="UPDATE `register` SET `Password`='$newpass' WHERE username='$username'";
+  	$result=mysqli_query($conn,$sql);
+      echo "<script>window.location='Logout.php';</script>";
+    }
+    echo "Username=".$username;
+    echo "<br>";
+    echo "Password=".$psw;
+  ?>
+</div>
+<div class="contentSec" id="RemAcc" style="display:none">
+  <h3>
+    <div>
+      <div style="padding:10px;">
+        <center>
+          Are You Sure?
+        </center>
+      </div>
+      <center style="padding:10px;">
+        <form method="POST">
+          <input type="submit" name="itsayes" value="Yes">
+        </form>
+      </center>
+    </div>
+    <?php
+      if(isset($_POST['itsayes']))
+      {
+          $sql="DELETE FROM `register` WHERE `Username`='".$_SESSION['username']."'";
+          $result=mysqli_query($conn,$sql);
+          echo "<meta http-equiv='refresh' content='0'>";
+          echo "<script>window.location='LogOut.php';</script>";
+      }
+    ?>
+    <br>
+  </h3>
+</div>
 </body>
 </html>
