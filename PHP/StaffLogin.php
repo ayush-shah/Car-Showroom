@@ -5,7 +5,7 @@ include 'Connection.php';
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+<link rel="shortcut icon" type="image/x-icon" href="../Icon/favicon.ico" />
 <link rel="stylesheet" href="../CSS/secondary.css">
 <script src="../JS/Staff.js"></script>
 <body>
