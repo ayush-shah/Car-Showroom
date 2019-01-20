@@ -59,6 +59,7 @@ button{
 }
 
 #staticnav a{
+  cursor: pointer;
   padding:10px;
   font-size: 22px;
   color: #8dca4099;
