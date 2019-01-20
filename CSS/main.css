@@ -1,126 +1,86 @@
-
-#loader{
-position:absolute;
-top:50%;
-left:50%;
-border:16px solid #f3f3f3;
-border-radius:50%;
-width: 120px;
-height: 120px;
-margin:-60px 0px 0px -60px;
-border-top:16px solid #000;
-border-right:16px solid #333;
-border-bottom:16px solid #777;
-border-left:16px solid #BBB;
-animation:spin 4s infinite;
+* {
+  box-sizing: border-box;
 }
-#parallax {
-  opacity:0.9;
-position: relative;
-background-attachment: fixed;
-background-position:center;
-background-repeat: no-repeat;
-background-size: cover;
+.override{
+  margin:0px !important;
+}
+body{
+  margin: 0px;
+  font-family: monospace;
 
 }
-#head1 a{
-  text-decoration: none;
-	cursor:pointer;
+p{
+  margin-block-start:0;
+  margin-block-end:1px;
 }
 
-.backgroundimg{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 90%;
-  position:fixed;
-  background-image:url(logo.png);
-}
-#parallax p{
-    background-color: #1114;
-    color: #eee;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
-#head1{
-	display:none;
-}
-#backimg{
-	width:50%;
-	height:50%;
-}
-header{
-display:inline-block;
-background-color:#EEE;
-text-align:center;
-width:100%;
-height:auto;
-overflow:hidden;
-}
-#staticnav{
-  overflow: hidden;
-  background-color: #333;
-  padding: 15px;
-}
-
-#staticnav a{
-  font-size:24px;
-
-color: #eee;
-left:5%;
-padding:15px;
-font-family: "Comic Sans MS", cursive, sans-serif;
-}
-#staticnav a:hover{
-opacity: 0.4;
-}
-
-
-@keyframes spin{
-50%{transform:rotate(360deg);}
+form{
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 input[type=text], input[type=password], textarea{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
 }
 
-#subimages{
-  display: block;
+button{
+  border: none;
+  width:100%;
+  padding: 14px 20px;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+#loader{
+  position:absolute;
+  top:50%;
+  left:50%;
+  border:16px solid #f3f3f3;
+  border-radius:50%;
+  width: 120px;
+  height: 120px;
+  margin:-60px 0px 0px -60px;
+  border-top:16px solid #000;
+  border-right:16px solid #333;
+  border-bottom:16px solid #777;
+  border-left:16px solid #BBB;
+  animation:spin 4s infinite;
+}
+
+#staticnav{
+  padding:15px 0px 15px 15px;
+  background-color: #333;
+}
+
+#staticnav a{
   padding:10px;
-  height:400px;
-  width:600px;
+  font-size: 22px;
+  color: #8dca4099;
 }
 
-button {
-    background-color: #eee;
-    color: #1AAAAA;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+#parallax{
+  opacity:0.9;
+  position: relative;
+  background-attachment: fixed;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-button:hover {
-    opacity: 0.9;
-    color:#4AAAAA;
-
+#parallax p{
+  padding: 10px;
+  color: darkgray;
+  letter-spacing: 10px;
+  font-size: 23px;
+  cursor: pointer;
+  background-color: #000000a3;
 }
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
 
 .contentSec{
 	display:none;
