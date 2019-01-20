@@ -53,6 +53,22 @@ button{
   animation:spin 4s infinite;
 }
 
+.backgroundimg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  position:fixed;
+  background-image:url(logo.png);
+}
+
+@keyframes spin{
+50%{transform:rotate(360deg);}
+}
+
+#head1{
+  display: none;
+}
+
 #staticnav{
   padding:15px 0px 15px 15px;
   background-color: #333;
