@@ -12,6 +12,7 @@ include 'PHP/Connection.php';
       <link rel="stylesheet" href="CSS/main.css">
       <link rel="shortcut icon" type="image/x-icon" href="Icon/favicon.ico" />
     </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body onload="loader()">
       <div id="loader" class="backgroundimg">
       </div>
@@ -96,7 +97,7 @@ include 'PHP/Connection.php';
               $result2 = mysqli_query($conn, "SELECT `img_name` FROM `subimages` WHERE `Id`=".$subid[$i]."");
               while($row2 = mysqli_fetch_array($result2))
               {
-                echo "<div id='parallax' style='min-height:500px;width:100%;background-image:url(Images/".$row2['img_name'].");'></div>";
+                echo "<div id='parallax' style='width:100%;background-image:url(Images/".$row2['img_name'].");'></div>";
               }
               echo "</div>";
             }
