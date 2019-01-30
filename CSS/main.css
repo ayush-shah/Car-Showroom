@@ -104,6 +104,15 @@ button{
 	display:none;
 }
 @media screen and (max-width:425px) and (max-height:628px) {
+  *{
+    font-size: 12px;
+  }
+  #staticnav{
+    display: grid;
+  }
+  img{
+    max-width: 30vw;
+  }
 
   #parallax p{
     font-size: 14px;

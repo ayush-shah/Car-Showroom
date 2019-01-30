@@ -166,7 +166,7 @@ while ($row = mysqli_fetch_array($result)) {
           $sql="DELETE FROM `register` WHERE `Username`='".$_SESSION['username']."'";
           $result=mysqli_query($conn,$sql);
           echo "<meta http-equiv='refresh' content='0'>";
-          echo "<script>window.location='LogOut.php';</script>";
+          echo "<script>window.location='Logout.php';</script>";
       }
     ?>
     <br>
