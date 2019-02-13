@@ -40,7 +40,7 @@ include 'PHP/Connection.php';
                     $subid[$i]=$row['Id'];
                     echo "<div id='parallax' style='min-height:500px;background-image:url(Images/".$row['Image'].");'>";
                     echo "<a onClick=openSec(event,'".$subid[$i]."')>";
-                    echo "<p>Name = ".$row['Name']."<br>Price = $".$row['Price']."<br>Id = ".$row['Id']."<br>Stock=".$row['Stock']."</p>";
+                    echo "<p>Name = ".$row['Name']."<br>Price = $".$row['Price']."<br>Stock=".$row['Stock']."</p>";
                     echo "</a></div>";
                     $i++;
                   }
