@@ -83,7 +83,7 @@ button{
 }
 
 #parallax{
-  min-height: 500px;
+  min-height: 555px;
   opacity:0.9;
   position: relative;
   background-attachment: fixed;
@@ -103,7 +103,7 @@ button{
 .contentSec{
 	display:none;
 }
-@media screen and (max-width:425px) and (max-height:628px) {
+@media screen and (max-width:1000px), screen and (max-height:500px) {
   *{
     font-size: 12px;
   }
@@ -124,5 +124,6 @@ button{
   #parallax{
     min-height: 65vmin;
     background-attachment: unset;
+    background-size: cover;
   }
 }
