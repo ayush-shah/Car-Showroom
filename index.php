@@ -38,7 +38,7 @@ include 'PHP/Connection.php';
                   while ($row = mysqli_fetch_array($result))
                   {
                     $subid[$i]=$row['Id'];
-                    echo "<div id='parallax' style='min-height:500px;background-image:url(Images/".$row['Image'].");'>";
+                    echo "<div id='parallax' style='background-image:url(Images/".$row['Image'].");'>";
                     echo "<a onClick=openSec(event,'".$subid[$i]."')>";
                     echo "<p>Name = ".$row['Name']."<br>Price = $".$row['Price']."<br>Stock=".$row['Stock']."</p>";
                     echo "</a></div>";
